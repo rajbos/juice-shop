@@ -32,3 +32,9 @@ jobs:
       
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: sarif
+        path: /juice-shop/results/${{ matrix.language }}.sarif
