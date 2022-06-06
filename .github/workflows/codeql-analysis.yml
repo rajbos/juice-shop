@@ -38,3 +38,6 @@ jobs:
       with:
         name: sarif
         path: /home/runner/work/juice-shop/results/${{ matrix.language }}.sarif
+        
+    - name: show sarif file in job summary
+      run: echo /home/runner/work/juice-shop/results/${{ matrix.language }}.sarif > $GITHUB_STEP_SUMMARY
