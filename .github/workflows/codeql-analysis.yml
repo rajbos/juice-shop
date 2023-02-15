@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  
+  schedule: 
+  -  cron: 17 1 * * 5
 
 jobs:
   analyze:
